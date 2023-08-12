@@ -1,0 +1,142 @@
+
+<!doctype html><html><head><meta charset="UTF-8"><base href="/"/><title>Valencia Club de Fútbol</title><link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png"><link rel="apple-touch-icon" sizes="180x180" href="assets/images/app-icon.png"><link rel="android-touch-icon" href="assets/images/app-icon.png"><link rel="windows-touch-icon" href="assets/images/app-icon.png"><link rel="manifest" href="site.webmanifest"><link rel="mask-icon" href="assets/images/safari-pinned-tab.svg" color="#9b895b"><meta name="msapplication-TileColor" content="#161616"><meta name="theme-color" content="#161616"><meta name="apple-itunes-app" content="app-id=1423049571"><meta name="google-play-app" content="app-id=es.valenciacf.android.app"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=4,shrink-to-fit=no"><meta name="google-site-verification" content="uMzQ6ZYNXm5LL_235lWzo73_DlSxXqCiaj97xvJwkKg"/><meta name="google-site-verification" content="Jdn96_VWL6RBXqZhXMEMavP8cGG_U9GO_GrUiVYkKnY"/><meta http-equiv="Content-Security-Policy" content=" frame-src 'self' *.googletagmanager.com *.zendesk.com *.facebook.com *.paypal.com *.cardinalcommerce.com bid.g.doubleclick.net *.google.com youtube.com *; "><script>window.resourceBasePath = "#{ResourceBasePath}#" || "/";</script><script defer="defer" src="/assets/js/90a001d8f528e98aeb9f.js"></script><script defer="defer" src="/assets/js/3c554f1fb1c25fb12f5e.js"></script><script defer="defer" src="/assets/js/0bb4b8762cf0fba90ba3.js"></script></head><body><div id="root"></div><div id="preloader" class="not-loaded"><style>body {
+                margin: 0;
+                padding: 0;
+            }
+
+            #preloader {
+                -webkit-transition: opacity 0.6s ease-in;
+                -moz-transition: opacity 0.6s ease-in;
+                -o-transition: opacity 0.6s ease-in;
+                transition: opacity 0.6s ease-in;
+
+                opacity: 0;
+                position: fixed;
+                z-index: 999999;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                pointer-events: none;
+                background-color: #333333;
+                will-change: opacity;
+            }
+
+            #preloader.not-loaded {
+                opacity: 1;
+            }
+
+            .wrapper {
+                position: relative;
+                display: flex;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .preloader-img {
+                max-width: 90%;
+            }</style><div class="wrapper"><img class="preloader-img" src="assets/images/loading.gif" alt="Valencia CF - Loading"></div></div><script src="//geoip-js.com/js/apis/geoip2/v2.1/geoip2.js"></script><script>function onGeoPluginLoaded() {
+            var countriesGroups = {
+                "asia": [
+                    'CN', // China
+                    'HK', // Hong Kong
+                    'MO', // Macau
+                    'JP', // Japan
+                    'KR', // Republic of Korea
+                    'MN', // Mongolia
+                    'BD', // Bangladesh
+                    'BT', // Bhutan
+                    'IN', // India
+                    'MV', // Maldives
+                    'NP', // Nepal
+                    'PK', // Pakistan
+                    'LK', // Sri Lanka
+                    'BN', // Brunei
+                    'KH', // Cambodia
+                    'TL', // East Timor
+                    'ID', // Indonesia
+                    'LA', // Laos
+                    'MY', // Malaysia
+                    'MM', // Myanmar
+                    'PH', // Philippines
+                    'SG', // Singapore
+                    'TH', // Thailand
+                    'VN', // Vietnam
+                    'TW', // Taiwan
+                ],
+                "mena": [
+                    'EG', // Egypt
+                    'DZ', // Algeria
+                    'MA', // Morocco
+                    'TN', // Tunisia
+                    'IQ', // Iraq
+                    'SA', // Saudi Arabia
+                    'JO', // Jordan
+                    'LY', // Libya
+                    'IL', // Israel
+                    'PS', // State of Palestine
+                    'SD', // Sudan
+                    'SY', // Syria
+                    'AE', // United Arab Emirates
+                    'LB', // Lebanon
+                    'KW', // Kuwait
+                    'YE', // Yemen
+                    'QA', // Qatar
+                    'MR', // Mauritania
+                    'OM', // Oman
+                    'IR', // Iran
+                    'BH', // Bahrain
+                    'DJ', // Djibouti
+                    'EH', // Western Sahara
+                ]
+            }
+
+            function onSuccess(data) {
+                if (data.country) {
+                    var country = data.country.iso_code;
+                    
+                    if (typeof country !== "string") {
+                        return
+                    }
+                    
+                    // Register the country to the GTM
+                    if (!window.dataLayer) {
+                        window.dataLayer = []
+                    }
+
+                    // Add to body
+                    var body = document.body;
+                    body.classList.add("geo-country-" + country.toLowerCase());
+
+                    // Notify GTM
+                    window.dataLayer.push({ 'country': country });
+
+                    // search if current country is present in the selected countries list.
+                    for(const groupKey in countriesGroups) {
+                        if (countriesGroups[groupKey].includes(country)) {
+                            // if country exists, add a class to body element                        
+                            body.classList.add("geo-" + groupKey + "-active");
+
+                            // Notify GTM
+                            window.dataLayer.push({ 'event': 'geo-' + groupKey });
+                        }
+                    }
+                }
+            }
+            
+            function onError(err) {
+                console.error(err);
+            }
+            
+            // Call country
+            geoip2.country(onSuccess, onError);
+        }
+        
+        if (geoip2) {
+            onGeoPluginLoaded();
+        }</script><script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/2827c7f1344b7c08d2c19a56b/cfb8db2e42045f1083ad40c8a.js");</script><script src="//imasdk.googleapis.com/js/sdkloader/ima3.js" defer="defer" async></script></body></html>
